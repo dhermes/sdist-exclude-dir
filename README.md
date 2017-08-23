@@ -85,3 +85,7 @@ $ diff outputs/07.txt outputs/01.txt
  ./example/include/example.h
  ./example/__init__.py
 ```
+
+## Issue Filed
+
+See https://github.com/pypa/packaging-problems/issues/100
