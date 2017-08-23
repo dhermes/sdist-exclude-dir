@@ -42,6 +42,9 @@ The following have been attempted and failed to exclude the directory:
 - `recursive-exclude example *.dylib.dSYM`
 - `recursive-exclude example/.lib *.dylib.dSYM`
 
-The following is the only one that has succeeded:
+The following have succeeded, but they are overly specific:
 
 - `prune example/.lib/libexample.dylib.dSYM`
+- `global-exclude *.so *.dylib *.plist` (succeeds because
+  `*.dylib` and `*.plist` are the only extensions present in
+  the `*.dylib.dSYM` directory
