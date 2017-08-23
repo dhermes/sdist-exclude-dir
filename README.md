@@ -42,6 +42,7 @@ The following have been attempted and failed to exclude the directory:
 5. `recursive-exclude example *.dylib.dSYM` (see `outputs/05.txt`)
 6. `recursive-exclude example/.lib *.dylib.dSYM` (see `outputs/06.txt`)
 9. `global-exclude *.so *.dylib *.dylib.dSYM/` (see `outputs/09.txt`)
+10. `global-exclude *.so *.dylib *.dylib.dSYM/*` (see `outputs/10.txt`)
 
 The following have succeeded, but they are overly specific:
 
@@ -63,6 +64,10 @@ $ diff -s outputs/01.txt outputs/05.txt
 Files outputs/01.txt and outputs/05.txt are identical
 $ diff -s outputs/01.txt outputs/06.txt
 Files outputs/01.txt and outputs/06.txt are identical
+$ diff -s outputs/01.txt outputs/09.txt
+Files outputs/01.txt and outputs/09.txt are identical
+$ diff -s outputs/01.txt outputs/10.txt
+Files outputs/01.txt and outputs/10.txt are identical
 $ diff -s outputs/07.txt outputs/08.txt
 Files outputs/07.txt and outputs/08.txt are identical
 $ diff outputs/07.txt outputs/01.txt
