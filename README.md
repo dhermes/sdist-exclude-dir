@@ -46,10 +46,10 @@ The following have been attempted and failed to exclude the directory:
 
 The following have succeeded, but they are overly specific:
 
-7. `prune example/.lib/libexample.dylib.dSYM` (see `outputs/07.txt`)
-8. `global-exclude *.so *.dylib *.plist` (succeeds because
-   `*.dylib` and `*.plist` are the only extensions present in
-   the `*.dylib.dSYM` directory, see `outputs/08.txt`)
+- `prune example/.lib/libexample.dylib.dSYM` (see `outputs/07.txt`)
+- `global-exclude *.so *.dylib *.plist` (succeeds because
+  `*.dylib` and `*.plist` are the only extensions present in
+  the `*.dylib.dSYM` directory, see `outputs/08.txt`)
 
 There isn't much difference in the output:
 
